@@ -41,15 +41,16 @@ public class BankSoftware {
                     break;
                 case 2:
                     System.out.println("Enter your account number:");
-                    String accNum = sc.next();
-                    if (accNum.equals(obj1.accNo)) {
+                    int accNum = sc.nextInt();
+                    sc.nextLine();
+                    if (accNum==obj1.accNo) {
                         obj1.authenticate();
-                    } else if (accNum.equals(obj2.accNo)) {
+                    } else if (accNum==(obj2.accNo)) {
                         obj2.authenticate();
-                    } else if (accNum.equals(obj3.accNo)) {
+                    } else if (accNum==(obj3.accNo)) {
                         obj3.authenticate();
                     }
-                    else{
+                    else {
                         System.out.println("Account does not exist.");
                     }
 
